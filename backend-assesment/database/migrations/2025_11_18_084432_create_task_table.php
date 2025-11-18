@@ -25,7 +25,7 @@ return new class extends Migration
             $table->unsignedBigInteger('assignee_id');
             $table->foreign('assignee_id')->references('id')->on('users');
             
-            $table->string('report');
+            $table->string('report')->nullable;
             $table->timestamps();
         });
     }
